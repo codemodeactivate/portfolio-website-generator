@@ -131,7 +131,7 @@ body {
         background-color: black;
         overflow: hidden;
         height: 300px;
-        background-image: url("./images/subtitle-bg.jpg");
+        background-image: url("../images/subtitle-bg.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

@@ -1,43 +1,4 @@
-const inquirer = require("inquirer");
-const fs = require("fs");
-//const html = require ('./template.js');
 
-inquirer
-    .prompt([
-        {
-            name: "firstName",
-            type: "input",
-            message: "First Name: ",
-        },
-        {
-            type: "input",
-            name: "lastName",
-            message: "Last Name: ",
-        },
-        {
-            type: "input",
-            name: "location",
-            message: "Where do you live?",
-        },
-        {
-            type: "input",
-            name: "bio",
-            message: "Tell us about yourself",
-        },
-        {
-            type: "input",
-            name: "linkedin",
-            message: "Enter your Linkedin URL: ",
-        },
-        {
-            type: "input",
-            name: "github",
-            message: "Enter your Github URL: ",
-        },
-    ])
-    .then((answers) => {
-        //const { firstName, lastName, location, bio, linkedin, github } = answers;
-        const html = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,13 +7,13 @@ inquirer
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <title>${answers.firstName} ${answers.lastName} - Front End Developer</title>
+    <title>Dariush Clingon - Front End Developer</title>
 </head>
 <body>
 <div class="wrapper"><!-- Grid House -->
 
 <header class="header">
-    <div class="header-name"><h1>${answers.lastName}</h1>
+    <div class="header-name"><h1>Clingon</h1>
     </div>
 </header> <!-- Grid Template Area: Header-->
 
@@ -78,7 +39,7 @@ inquirer
     </aside>
 
     <section class="bio"> <!-- Grid Template Area: bio - right side on big window-->
-        ${answers.bio}
+        nfnffn
         <img src="./assets/images/jeff.jpg" alt="Jeff Zenko with a fresh haircut" />
     </section>
     <aside class="work" id="work"><!-- Grid Template Area: work = left side on big window-->
@@ -86,14 +47,14 @@ inquirer
     </aside>
     <section class="work-content"><!-- Grid Template Area: work-area - right hand side on big window-->
             <div class="item">
-                <a href="https://grappling.camp" target="_blank"><img src="./assets/images/grappling_camps.png"></a>
+                <a href="#" target="_blank"><img src="https://via.placeholder.com/820x365"></a>
                 <div class="label">
                 <h4>Grappling Camps</h4>
                 <div class="description">Wordpress</div>
                 </div>
             </div>
             <div class="item">
-                <a href="https://github.com/codemodeactivate/book-it" target="_blank"><img src="https://github.com/codemodeactivate/book-it/raw/main/assets/img/screenshot.gif"></a>
+                <a href="#" target="_blank"><img src="https://via.placeholder.com/820x365"></a>
                 <div class="label">
                 <h4>Book.It</h4>
                 <div class="description">Javascript, Bulma</div>
@@ -133,9 +94,9 @@ inquirer
         <ul>
             <li><a href="tel:5555555555">555.555.5555</a></li>
             <li><a href="mailto:jeff.zenko@gmail.com">jeff.zenko@gmail.com</a></li>
-            <li><a href="${answers.github}" target="_blank">GitHub</a></li>
+            <li><a href="ssppsp" target="_blank">GitHub</a></li>
             <li><a href="#" target="_blank">Twitter</a></li>
-            <li><a href="${answers.linkedin}" target="_blank">Linkedin</a></li>
+            <li><a href="iiieei" target="_blank">Linkedin</a></li>
         </ul>
     </section>
 </footer>
@@ -144,10 +105,4 @@ inquirer
 
 </div>
 </body>
-</html>`;
-        const htmlAnswers = html.replace("${lastName}", answers.lastName);
-        fs.writeFile("./generate/generate.html", htmlAnswers, (err) => {
-            if (err) throw err;
-            console.log("Portfolio generated successfully!");
-        });
-    });
+</html>
